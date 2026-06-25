@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #030712;
+  --color-surface: #111827;
+  --color-card: #1F2937;
+  --color-primary-indigo: #6366F1;
+  --color-accent-cyan: #06B6D4;
+  --color-success-green: #22C55E;
+  --color-danger-red: #EF4444;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #94A3B8;
+  --color-border-custom: rgba(255, 255, 255, 0.08);
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom scrollbar matching dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Custom glow effect */
+.glow-primary {
+  box-shadow: 0 0 40px -5px rgba(99, 102, 241, 0.15);
+}
+.glow-accent {
+  box-shadow: 0 0 40px -5px rgba(6, 182, 212, 0.15);
+}
+
+/* Glassmorphism card utility */
+.glass-card {
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Particle background animation helper */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(-100px) rotate(360deg); opacity: 0.2; }
+}
+
+.particle {
+  position: absolute;
+  pointer-events: none;
+  animation: float 15s infinite linear;
+}

@@ -1,0 +1,15 @@
+numpy
+pillow
+opencv-python
+torch
+torchvision
+tqdm
+facenet-pytorch
+eva-decord
+dlib
+face_recognition
+fastapi
+uvicorn
+python-multipart
+einops
+setuptools<82
